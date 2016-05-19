@@ -16,9 +16,19 @@ number_cents = int(input("How much change do you have?: "))
 
 my_extracted_change = ("Your change is {quarters} quarters ,{dimes} dimes, {nickels} nickels and {pennies} pennies ")
 
-my_extracted_change.format(
-quarters = (number_cents%value_quarter)
-dimes = (value_quarter%value_dime) #= dimes
-nickels = (value_dime%value_nickel) #= nickels
-pennies = (value_nickel%value_penny) #= pennies
+
+quarters = number_cents % value_quarter
+dimes = quarters % value_dime
+nickels = dimes % value_nickel
+pennies = nickels % value_penny
+
+my_transformed_extracted_change = my_extracted_change.format(
+quarters = quarters,
+dimes = dimes,
+nickels = nickels,
+pennies = pennies
+
 )
+
+print(my_transformed_extracted_change)
+print()
