@@ -9,6 +9,7 @@ def dice(number_of_dice, number_of_sides):
 dice_number = int(input("How many dice would you like to roll? "))
 dice_sides = int(input("How many sides sould each die have? "))
 
+
 dice(dice_number, dice_sides)
 
 
