@@ -61,14 +61,18 @@ def main():
     print(" NFL Teams Menu: ")
     print("1. Get teams by conference and division: ")
     print("2. Enter team to get conference and divsion: ")
-    print("Enter ' 1 ' or ' 2 ' ")
+    print("3. Exit the program")
+    print("Enter ' 1 ' or ' 2 ' ' 3 ' ")
     choice = int(input())
     if choice == 1:
         get_team()
     if choice == 2:
         get_division()
-    else:
-        exit
-        
+    elif choice == 3:
+
+        import sys
+
+        print('Goodbye!')
+        sys.exit()
 
 main()
